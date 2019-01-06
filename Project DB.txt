@@ -1,0 +1,79 @@
+﻿FINAL 프로젝트 DB 정리
+
+member
+  - member_id 	 pk			아이디	
+  - member_pass				비밀번호
+  - member_name				이름
+  - member_age				나이
+  - member_phone			전화번호
+  - member_email			이메일
+  - member_address			주소
+  - member_division			회원구분
+  - member_company			업소명
+
+product
+  - product_name			상품명
+  - product_num 	pk		상품번호
+  - product_price			가격
+  - product_amount			총수량
+  - product_image			사진
+  - product_info			상품정보
+
+room
+  - member_company			업소명
+  - room_address			업소위치
+  - room_num 	 pk			방 번호
+  - room_name				방이름
+  - room_image				방사진
+  - room_info				방정보
+  - room_limit				숙박인원
+  - room_price				방가격
+  
+
+cart
+  - order_num 	pk			주문번호
+  - product_num				상품번호	
+  - member_id				회원id
+  - product_name			상품명
+  - order_amount			주문수량
+  - order_price				주문금액 
+
+book -- 예약
+  - book_num	 	pk		예약번호
+  - room_id				방id
+  - member_id				회원id
+  - book_date				예약일
+  - book_price				예약가격
+  
+review
+  - room_id 				방id
+  - review_num 	pk			후기글번호
+  - member_id 				회원id
+  - review_content			리뷰내용
+  - review_image			리뷰사진
+  - review_score			별점
+  - book_date				예약일
+  - review_date				등록일
+  - review_like				추천
+  - review_report			신고
+  - review_hit				조회수
+
+
+info
+  - info_num 	pk			정보글번호
+  - member_id				회원id
+  - info_like				추천
+  - info_report				신고
+  - info_hit				조회수
+  - info_date					등록일
+
+reple
+  - reple_division			댓글구분
+  -	origin_num				원본글번호
+  - member_id  				회원id
+  - reple_content			리플내용
+  - reple_num 		pk		댓글번호
+  - reple_lev				리플레벨
+  - reple_seq				리플시퀀스
+  - reple_like				리플추천
+  - reple_report			리플신고
